@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: #242528;
+}
+#header-img{
+    overflow: hidden;
+    background-image: url('../images/header/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 10em;
+    position: relative;
+}
+#header-img h1{
+    text-indent: -1000em;
+}
+#wrapper{
+    display: grid;
+}
