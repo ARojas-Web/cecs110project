@@ -108,6 +108,7 @@ header{
     grid-row-start: 2;
     grid-row-end: 3;
     min-height: 100vh;
+    font-family: 'Fira Sans', sans-serif;
 }
 #wrapper footer{
     background-color: black;
@@ -137,27 +138,19 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*this project will use a 5 column grid/flex system for the main content*/
-.main-wrapper{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 0 5px;
-    font-family: 'Fira Sans', sans-serif;
-    margin: 0;
-}
+/*this project will use a 5 column flex system for the main content*/
 .row{
-    grid-column: 1/6;
     display: flex;
 }
 .post{
     padding: 1em;
     box-shadow: 0 1px 6px black;
     /*background-color: #0077FF;*/
-    background-color: #B0D1F7;
-    background-image: url("../images/backgrounds/black-paper.png");
+    background-color: #3773a1;
+    background-image: url("../images/backgrounds/fake-brick.png");
     position: relative;
-    animation: fadeInUp 2s;
+    animation: fadeIn 2s;
+    color: #DBDBDB;
 }
 .post p{
     font-size: 17px;
@@ -181,14 +174,18 @@ header{
 .col-1{
     width: 20%;
 }
-.card-s{
-    grid-column: 1;
+.card-deck{
+    justify-content: center;
 }
-.card-m{
-    grid-column: 2;
+.card{
+    width: 30%;
+    margin: 0.5em;
+    box-shadow: 0 1px 5px 1.5px #9E9E9E;
+    background-color: whitesmoke;
 }
-.card-l{
-    grid-column: 3;
+.circle{
+    border-radius: 50%;
+    box-shadow: 0 1px 3px #505050;
 }
 
 @keyframes fadeInUp{
@@ -198,6 +195,14 @@ header{
     }
     100%{
         top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
         opacity: 1;
     }
 }
