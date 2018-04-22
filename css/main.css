@@ -4,6 +4,11 @@ body{
 header{
     background-color: #242528;
     z-index: 500;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0 1em;
 }
 #header-img{
     overflow: hidden;
@@ -17,30 +22,57 @@ header{
 #header-img h1{
     text-indent: -1000em;
 }
+#nav-logo-wrapper{
+    background-image: url("../images/nav/comics-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: fixed;
+    width: 12em;
+}
 #wrapper{
     background-color: #BAC2C7;
     display: grid;
     grid-template-columns: 12em auto;
+    grid-template-rows: auto auto auto;
 }
 #wrapper nav{
-    background-color: #BAC2C7;
+    background-color: #242528;
     grid-column-start: 1;
     grid-column-end: 2;
     min-height: 100vh;
-    box-shadow: 3px 0px 5px white;
-    z-index: 100;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    box-shadow: 1px 1px 8px grey;
+    z-index: 1000;    
+    align-items: center;
 }
-#wrapper nav .nav-logo{
-    background-image: url('../images/header/logo.png');
+/*#wrapper nav .nav-logo{
+    background-image: url('../images/nav/logo.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -1000em;
     position: fixed;
     width: 12em;
+    height: 5em;
+    padding: 0;
+}*/
+#wrapper nav .nav-logo{
+    background-image: url('../images/nav/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -1000em;
+    width: 12em;
+    height: 5em;
+    vertical-align: middle;
     padding: 0;
 }
 #wrapper nav ul{
+    margin-top: 8em;
     position: fixed;
     list-style-type: none;
     font-family: 'Raleway', sans-serif;
@@ -52,57 +84,87 @@ header{
     text-align: center;
 }
 #wrapper nav li a{
-    color: black;
+    color: white;
     padding: 1em 0;
     text-decoration: none;
     text-align: center;
     display: block;
 }
 #wrapper nav li a:visited{
+    color: white;
     text-decoration: none;
 }
 #wrapper nav li a:hover{
-    background-color: #242528;
+    background-color: whitesmoke;
     padding: 1em 0em;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 #wrapper main{
     background-color: #2B3840;
     grid-column-start: 2;
     grid-column-end: 3;
-    padding: 1rem;
+    padding: 0;
+    grid-row-start: 2;
+    grid-row-end: 3;
     min-height: 100vh;
 }
 #wrapper footer{
-    background-color: #242528;
-    grid-column-start: 1;
+    background-color: black;
+    grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     padding: 2rem 0;
     color: white;
     text-align: center;
     z-index: 300;
+}
+.italic{
+    font-style: italic;
+}
+#parallax-index-1{
+    background-image: url("../images/content/dc-superheroes-blue.jpg");
+}
+#parallax-index-2{
+    background-image: url("../images/content/sandman%20overture.jpg");
+}
+.parallax{
+    width: 100%;
+    min-height: 25em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*this project will use a 5 column grid/flex system for the main content*/
 .main-wrapper{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    grid-gap: 5px;
-    font-family: 'Alegreya', serif;
-}
-.main-wrapper div{
-
+    grid-gap: 0 5px;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
 }
 .row{
-    padding: 1em;
-    box-shadow: 0 1px 6px black;
-    background-color: #22538A;
-    background-image: url("../images/backgrounds/black-paper.png");
-    position: relative;
     grid-column: 1/6;
     display: flex;
-    animation: fadeInUp 3s;
+}
+.post{
+    padding: 1em;
+    box-shadow: 0 1px 6px black;
+    /*background-color: #0077FF;*/
+    background-color: #B0D1F7;
+    background-image: url("../images/backgrounds/black-paper.png");
+    position: relative;
+    animation: fadeInUp 2s;
+}
+.post p{
+    font-size: 17px;
+}
+.post h3{
+    font-family: 'Russo One', sans-serif;
+    font-size: 2em;
 }
 .col-5{
     width: 100%;
@@ -131,7 +193,7 @@ header{
 
 @keyframes fadeInUp{
     0%{
-        top: 250px;
+        top: 300px;
         opacity: 0;
     }
     100%{
