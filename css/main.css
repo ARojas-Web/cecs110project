@@ -20,7 +20,7 @@ header{
 #wrapper{
     background-color: #BAC2C7;
     display: grid;
-    grid-template-columns: 15em auto;
+    grid-template-columns: 12em auto;
 }
 #wrapper nav{
     background-color: #BAC2C7;
@@ -37,7 +37,7 @@ header{
     background-repeat: no-repeat;
     text-indent: -1000em;
     position: fixed;
-    width: 15em;
+    width: 12em;
     padding: 0;
 }
 #wrapper nav ul{
@@ -45,7 +45,7 @@ header{
     list-style-type: none;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    width: 15em;
+    width: 12em;
     padding: 0;
 }
 #wrapper nav li{
@@ -83,11 +83,59 @@ header{
     text-align: center;
     z-index: 300;
 }
+/*this project will use a 5 column grid/flex system for the main content*/
 .main-wrapper{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    grid-gap: 5px 10px;
+    grid-gap: 5px;
     font-family: 'Alegreya', serif;
-    color: white;
+}
+.main-wrapper div{
+
+}
+.row{
+    padding: 1em;
+    box-shadow: 0 1px 6px black;
+    background-color: #22538A;
+    background-image: url("../images/backgrounds/black-paper.png");
+    position: relative;
+    grid-column: 1/6;
+    display: flex;
+    animation: fadeInUp 3s;
+}
+.col-5{
+    width: 100%;
+}
+.col-4{
+    width: 80%;
+}
+.col-3{
+    width: 60%;
+}
+.col-2{
+    width: 40%;
+}
+.col-1{
+    width: 20%;
+}
+.card-s{
+    grid-column: 1;
+}
+.card-m{
+    grid-column: 2;
+}
+.card-l{
+    grid-column: 3;
+}
+
+@keyframes fadeInUp{
+    0%{
+        top: 250px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
 }
