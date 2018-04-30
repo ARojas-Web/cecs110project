@@ -39,7 +39,7 @@ header{
     grid-template-rows: auto auto auto;
 }
 #wrapper nav{
-    background-color: #242528;
+    background-color: #D5DEE9;
     grid-column-start: 1;
     grid-column-end: 2;
     min-height: 100vh;
@@ -84,20 +84,20 @@ header{
     text-align: center;
 }
 #wrapper nav li a{
-    color: white;
+    color: black;
     padding: 1em 0;
     text-decoration: none;
     text-align: center;
     display: block;
 }
 #wrapper nav li a:visited{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 #wrapper nav li a:hover{
-    background-color: whitesmoke;
+    background-color: #515151;
     padding: 1em 0em;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 #wrapper main{
@@ -111,7 +111,7 @@ header{
     font-family: 'Fira Sans', sans-serif;
 }
 #wrapper footer{
-    background-color: black;
+    background-color: #242528;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
