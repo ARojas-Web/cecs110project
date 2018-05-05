@@ -36,7 +36,7 @@ header{
     background-color: #BAC2C7;
     display: grid;
     grid-template-columns: 12em auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto;
 }
 #wrapper nav{
     background-color: #D5DEE9;
@@ -48,18 +48,8 @@ header{
     box-shadow: 1px 1px 8px grey;
     z-index: 1000;    
     align-items: center;
+    left: 0;
 }
-/*#wrapper nav .nav-logo{
-    background-image: url('../images/nav/logo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-indent: -1000em;
-    position: fixed;
-    width: 12em;
-    height: 5em;
-    padding: 0;
-}*/
 #wrapper nav .nav-logo{
     background-image: url('../images/nav/logo.png');
     background-size: contain;
@@ -120,6 +110,7 @@ header{
     color: white;
     text-align: center;
     z-index: 300;
+    padding: 2em 0;
 }
 .italic{
     font-style: italic;
@@ -204,5 +195,125 @@ header{
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes slideInLeft{
+    from{
+        left: -25em;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes slideOutLeft{
+    from{
+        left: 0;
+    }
+    to{
+        left: -25em;
+    }
+}
+
+.floatActionBtn{
+    display: none;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.black-text{
+    color: #000000;
+}
+
+.white-text{
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px){
+    #wrapper{
+        overflow-x: hidden;
+        grid-template-columns: 0 auto;
+    }
+    #wrapper nav{
+        float: left;
+        position: fixed;
+        left: -30em;
+    }
+    #wrapper nav *{
+        float: left;
+        position: relative;
+    }
+    #wrapper nav ul{
+        height: 10em;
+        position: fixed;
+    }
+    #wrapper nav li{
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    #wrapper nav li a{
+        display: block;
+        text-align: center;
+        padding: 1em 0em;
+        width: 100%;
+    }
+    .floatActionBtn{
+        display: block;
+        float: right;
+        width:50px;
+        height:50px;
+        bottom:15px;
+        right:15px;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 50%;
+        background-color: #00FFCD;
+        outline: none;
+        border: none;
+    }
+    .floatActionBtn:focus{
+        outline: none;
+        border: none;
+    }
+    .floatActionBtn:active{
+        background-color: #99FFFF;
+    }
+    .col-5{
+        width: 100%;
+    }
+    .col-4{
+        width: 100%;
+    }
+    .col-3{
+        width: 100%;
+    }
+    .col-2{
+        width: 100%;
+    }
+    .col-1{
+        width: 100%;
     }
 }
