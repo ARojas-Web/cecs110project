@@ -9,8 +9,10 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <button class="floatActionBtn black-text" onclick="toggleMenu()"><i class="material-icons">menu</i></button>
         <div id="wrapper">
             <header>
                 <div id="header-img">
@@ -25,11 +27,39 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="comics.html">Comics</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
             </nav>
             <main>
+                <div class="row post">
+                    <div class="col-5">
+                        <h2>Movies</h2>
+                        <p>
+                            While DC Comics does not have as many movies as Marvel, it has put out some good content in this regard. However, it would be biased to say that their track record with excellent movies. Warner Bros. has largely at fault for this because they refuse to allow writers and directors to make their visions a reality without any tampering and comic book writers do not get closely involved with movies. Even so, they have two excellent movie series that make up for their lower quality films. It's not hard to guess what they are too. See below to read a little about them.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="slideshow-container">
+                            <div class="slides">
+                                <img src="images/content/Media/The Dark Knight.jpg" alt="The Dark Knight Trilogy">
+                                <div class="slide-caption">The Dark Knight Trilogy. The Dark Knight Trilogy was a huge success critically and financially. It showed the world that superhero movies do not have to be all about explosions and big fights with colorful special effects. What Christopher Nolan did was change the way the world looked at superhero movies thanks to excellent writing and acting from the entire cast. It is without a doubt, the best live action movies that DC Comics has put out, and <i>The Dark Knight</i> is perhaps the greatest superhero movie to date.</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/content/Media/Wonder Woman.jpg" alt="Wonder Woman (2017)">
+                                <div class="slide-caption">
+                                    In a time where the DCEU was inspired by The Dark Knight trilogy to make dark, serious movies there was Wonder Woman. DC and WB failed to capture what made The Dark Knight great, but Wonder Woman showed that not all their movies have to be dark, but rather what matters more is well-written characters with depth and a storyline that progresses naturally without feeling forced. Not only was Wonder Woman the first successful superhero movie with a female lead, but it is also the first truly great movie in the DCEU.
+                                </div>
+                            </div>
+                            <div class="slideshow-controls">
+                                <a class="left-cursor" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="right-cursor" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer>
                 <p>Created for a school project for CECS 110.</p>
@@ -37,5 +67,7 @@
                 <p>I do not own the media provided on this website.</p>
             </footer>
         </div>
+        <script src="js/menu.js"></script>
+        <script src="js/slideshow.js"></script>
     </body>
 </html>
