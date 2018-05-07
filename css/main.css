@@ -173,13 +173,21 @@ header{
     width: 20%;
 }
 .card-deck{
+    display: flex;
     justify-content: center;
+    margin: auto;
+    align-items: center;
 }
 .card{
     width: 30%;
     margin: 0.5em;
-    box-shadow: 0 1px 5px 1.5px #9E9E9E;
-    background-color: whitesmoke;
+    box-shadow: 0 1px 5px 2px #555555;
+    background-color: aliceblue;
+    color: black;
+    min-height: 200px;
+}
+.card-content{
+    padding: 0 1em;
 }
 .circle{
     border-radius: 50%;
@@ -278,20 +286,19 @@ header{
     margin: 0 !important;
     padding: 1em 5em 0 5em;
 }
-.slideshow-controls{
-    height: 100%;
+/*.slideshow-controls{
     position: absolute;
     z-index: 10000;
-}
+    vertical-align: middle;
+}*/
 .left-cursor, .right-cursor{
     cursor: pointer;
     color: white;
-    text-shadow: #000000;
     position: relative;
+    text-shadow: #000000;
     padding: 1.5em 2em;
     margin: auto;
-    /*display: flex;*/
-    bottom: 4.4em;
+    bottom: 6em;
     overflow: hidden;
 }
 .left-cursor:hover, .right-cursor:hover{
@@ -300,11 +307,11 @@ header{
 }
 
 .left-cursor{
-    /*float: left;*/
+    float: left;
 }
 
 .right-cursor{
-    /*float: right;*/
+    float: right;
     right: 0;
 }
 .slideshow-container{
@@ -351,7 +358,7 @@ header{
         position: fixed;
         z-index: 1000;
         border-radius: 50%;
-        background-color: #00FFCD;
+        background-color: #99FFFF;
         outline: none;
         border: none;
     }
@@ -360,7 +367,7 @@ header{
         border: none;
     }
     .floatActionBtn:active{
-        background-color: #99FFFF;
+        background-color: #00FFCD;
     }
     .col-5{
         width: inherit;
@@ -387,5 +394,8 @@ header{
         color: white;
         text-align: center;
         z-index: 300;
+    }
+    .left-cursor, .right-cursor{
+        bottom: 12em;
     }
 }

@@ -1,11 +1,14 @@
 var slideIndex = 1;
-showDivs(slideIndex);
-function plusSlides(n){
-    showDivs(slideIndex += n);
+var slideshowContainers = document.getElementsByClassName("slideshow-container");
+for(var k=0; k < slideshowContainers.length; k++){
+    showDivs(slideshowContainers[k], slideIndex);
 }
-function showDivs(n){
+function plusSlides(e, n){
+    showDivs(e.parentNode, slideIndex += n);
+}
+function showDivs(div, n){
     var i;
-    var x = document.getElementsByClassName("slides");
+    var x = div.getElementsByClassName("slides");
     if (n > x.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
