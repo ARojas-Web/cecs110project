@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head lang="en">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="application-name" content="Comics Corner Blog">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
+        <title>About</title>
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -32,6 +32,31 @@
                     </ul>
             </nav>
             <main>
+                <div class="row post">
+                    <div class="col-5 form-col">
+                        <h3>Contact Me</h3>
+                        <p>Contact me for any questions or remarks you may have about this site.</p>
+                    </div>
+                    <form class="col-5 form-col" action="mailto:anthony.rojas@student.csulb.edu" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="emailInput">Email: </label>
+                            <input type="email" name="email" id="emailInput" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameInput">Name: </label>
+                            <input type="text" name="name" id="nameInput" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageInput">Message: </label>
+                            <br>
+                            <textarea name="body" id="messageInput" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn-link btn-dark" type="submit" value="Submit">Send</button>
+                            <button class="btn-link btn-dark" type="reset" value="Reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
             </main>
             <footer>
                 <p>Created for a school project for CECS 110.</p>
